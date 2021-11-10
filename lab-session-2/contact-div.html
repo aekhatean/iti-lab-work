@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <form
+      action="get"
+      class="div-form"
+      style="max-width: 50em; margin: 7em auto"
+    >
+      <fieldset>
+        <legend>Contact Us</legend>
+        <!-- Your Name Input start-->
+        <div>
+          <label for="user-name">Your Name</label>
+          <input type="text" name="user-name" id="user-name" />
+        </div>
+        <br />
+        <!-- Your Name Input end-->
+
+        <!-- Your opinion Input start -->
+        <div>
+          <label for="user-opinion">Your opinion</label>
+          <div class="options">
+            <input
+              type="radio"
+              name="user-opinion"
+              id="very-female"
+              value="very good"
+            />
+            <label for="very-good">Very Good</label>
+
+            <input type="radio" name="user-opinion" id="good" value="good" />
+            <label for="very-good">Good</label>
+
+            <input type="radio" name="user-opinion" id="fair" value="fair" />
+            <label for="very-good">Fair</label>
+          </div>
+        </div>
+        <br />
+        <!-- Your opinion Input end -->
+
+        <!-- Your Gender Input start -->
+        <div>
+          <label for="user-gender">Gender</label>
+          <div class="options">
+            <input type="radio" name="user-gender" id="male" value="male" />
+            <label for="male">male</label>
+
+            <input type="radio" name="user-gender" id="female" value="female" />
+            <label for="female">Female</label>
+          </div>
+        </div>
+        <br />
+        <!-- Your Gender Input end -->
+
+        <!-- Your Marital status Input start -->
+        <div>
+          <label for="user-marital-status">Marital status</label>
+          <select name="user-marital-status">
+            <option>Single</option>
+            <option>Married</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <br />
+        <!-- Your Marital Status Input end -->
+
+        <!-- How did you know about us Input start -->
+        <div>
+          <label for="user-awareness">How did you know about us?</label>
+          <select name="user-awareness">
+            <option>Internet</option>
+            <option>Friend</option>
+            <option>Search Engine</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <br />
+        <!-- How did you know about us Input end -->
+
+        <!-- Your mail Input start-->
+        <div>
+          <label for="user-email">Your email</label>
+          <input type="text" name="user-email" id="user-email" />
+        </div>
+        <br />
+        <!-- Your mail Input end-->
+
+        <!-- Your Email Subject Input start-->
+        <div>
+          <label for="email-subject">Email Subject</label>
+          <input type="text" name="user-name" id="user-name" />
+        </div>
+        <br />
+        <!-- Your Email Subject Input end-->
+
+        <!-- Your Message Input start-->
+        <div>
+          <label for="user-message">Message</label>
+          <textarea
+            name="user-message"
+            id="user-message"
+            cols="50"
+            rows="20"
+          ></textarea>
+        </div>
+        <br />
+        <!-- Your Message Input end-->
+
+        <!-- Form submit & reset Start -->
+        <div>
+          <input type="submit" value="submit" />
+          <input type="reset" value="reset" />
+        </div>
+        <br />
+        <!-- Form submit & reset End -->
+      </fieldset>
+    </form>
+    <a href="/contact.html">Show with table</a>
+  </body>
+</html>

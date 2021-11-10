@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <form action="get" style="max-width: 50em; margin: 7em auto">
+      <fieldset>
+        <legend>Contact Us</legend>
+        <table border="1" width="100%" cellpadding="8">
+          <!-- Your Name Input start-->
+          <tr>
+            <td>
+              <label for="user-name">Your Name</label>
+            </td>
+            <td>
+              <input type="text" name="user-name" id="user-name" />
+            </td>
+          </tr>
+          <!-- Your Name Input end-->
+
+          <!-- Your opinion Input start -->
+          <tr>
+            <td>
+              <label for="user-opinion">Your opinion</label>
+            </td>
+            <td>
+              <input
+                type="radio"
+                name="user-opinion"
+                id="very-female"
+                value="very good"
+              />
+              <label for="very-good">Very Good</label>
+
+              <input type="radio" name="user-opinion" id="good" value="good" />
+              <label for="very-good">Good</label>
+
+              <input type="radio" name="user-opinion" id="fair" value="fair" />
+              <label for="very-good">Fair</label>
+            </td>
+          </tr>
+          <!-- Your opinion Input end -->
+
+          <!-- Your Gender Input start -->
+          <tr>
+            <td>
+              <label for="user-gender">Gender</label>
+            </td>
+            <td>
+              <input type="radio" name="user-gender" id="male" value="male" />
+              <label for="male">male</label>
+
+              <input
+                type="radio"
+                name="user-gender"
+                id="female"
+                value="female"
+              />
+              <label for="female">Female</label>
+            </td>
+          </tr>
+          <!-- Your Gender Input end -->
+
+          <!-- Your Marital status Input start -->
+          <tr>
+            <td>
+              <label for="user-marital-status">Marital status</label>
+            </td>
+            <td>
+              <select name="user-marital-status">
+                <option>Single</option>
+                <option>Married</option>
+                <option>Other</option>
+              </select>
+            </td>
+          </tr>
+          <!-- Your Marital Status Input end -->
+
+          <!-- How did you know about us Input start -->
+          <tr>
+            <td>
+              <label for="user-awareness">How did you know about us?</label>
+            </td>
+            <td>
+              <select name="user-awareness">
+                <option>Internet</option>
+                <option>Friend</option>
+                <option>Search Engine</option>
+                <option>Other</option>
+              </select>
+            </td>
+          </tr>
+          <!-- How did you know about us Input end -->
+
+          <!-- Your mail Input start-->
+          <tr>
+            <td>
+              <label for="user-email">Your email</label>
+            </td>
+            <td>
+              <input type="text" name="user-email" id="user-email" />
+            </td>
+          </tr>
+          <!-- Your mail Input end-->
+
+          <!-- Your Email Subject Input start-->
+          <tr>
+            <td>
+              <label for="email-subject">Email Subject</label>
+            </td>
+            <td>
+              <input type="text" name="user-name" id="user-name" />
+            </td>
+          </tr>
+          <!-- Your Email Subject Input end-->
+
+          <!-- Your Message Input start-->
+          <tr>
+            <td>
+              <label for="user-message">Message</label>
+            </td>
+            <td>
+              <textarea
+                name="user-message"
+                id="user-message"
+                cols="50"
+                rows="20"
+              ></textarea>
+            </td>
+          </tr>
+          <!-- Your Message Input end-->
+          <!-- Form submit & reset Start -->
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="submit" />
+              <input type="reset" value="reset" />
+            </td>
+          </tr>
+          <!-- Form submit & reset End -->
+        </table>
+      </fieldset>
+    </form>
+    <a href="/contact-div.html">Show with div</a>
+  </body>
+</html>
