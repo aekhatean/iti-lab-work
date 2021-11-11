@@ -1,7 +1,7 @@
-p font,
-div font,
-span font {
-  font-family: sans-serif;
+p,
+div,
+span {
+  font-family: " Lucida Calligraphy", sans-serif;
 }
 
 div h1 {
