@@ -1,0 +1,10 @@
+p font,
+div font,
+span font {
+  font-family: sans-serif;
+}
+
+div h1 {
+  margin: auto;
+  text-align: center;
+}
