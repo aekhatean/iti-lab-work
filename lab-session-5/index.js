@@ -56,8 +56,8 @@ const intentionallyWrong = () => {
   }
 };
 
-// showRandomJsTip();
-// intentionallyWrong();
+showRandomJsTip();
+intentionallyWrong();
 
 /**
  * Bonus Task
