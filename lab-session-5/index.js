@@ -37,7 +37,7 @@ const showRandomJsTip = () => {
 
 const showDateInLocalFormat = () => {
   let output = undefined;
-  currDate = new Date().toLocaleDateString();
+  const currDate = new Date().toLocaleDateString();
   const color = prompt(
     "Select a color yoy want to see your date in: (r) red, (b) blue, (g) green"
   );
