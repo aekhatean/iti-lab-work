@@ -1,0 +1,128 @@
+:root {
+  /* Remember to break it down to colors */
+  --primary-gradient: linear-gradient(
+    168deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(47, 47, 162, 1) 35%,
+    rgba(61, 61, 156, 1) 100%
+  );
+}
+
+* {
+  font-family: sans-serif;
+  line-height: 1.5em;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  background: rgb(2, 0, 36);
+  background: var(--primary-gradient);
+}
+
+form {
+  bottom: 4em;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 30rem;
+  background-color: rgb(240, 245, 245);
+  border-radius: 1em;
+  box-shadow: 6px 6px 6px rgb(55 84 170 / 10%), -3px -3px 11px #ffffff57;
+}
+
+form > * {
+  max-width: 100%;
+  display: flex;
+}
+
+form > input,
+form > select {
+  border-radius: 0.4em;
+  height: 2rem;
+  border: 0;
+  padding-inline: 1rem;
+  background-color: white;
+}
+
+form > input[type="submit"] {
+  margin-top: 2rem;
+  height: 3rem;
+  font-weight: bold;
+  background-color: rgba(61, 61, 156, 1);
+  color: rgb(240, 245, 245);
+}
+
+a {
+  color: white;
+}
+
+/* --------------------- */
+/* Thanks page specifics */
+/* --------------------- */
+#thanks {
+  color: rgb(240, 245, 245);
+}
+
+#vr-full-name:valid {
+  background-color: white;
+}
+
+#vr-full-name:valid:not(:focus) + ::after {
+  content: url("http://www.simpleimageresizer.com/_uploads/photos/f6e9a592/valid_1_9.png");
+}
+
+/* Tried images but they cannot be resized */
+#vr-full-name:invalid:not(:focus) {
+  background-color: #80808045;
+}
+
+#vr-full-name:invalid:not(:focus) + ::after {
+  content: url("http://www.simpleimageresizer.com/_uploads/photos/f6e9a592/notvalid_2_9.png");
+}
+
+/* ---------------------- */
+/* Gallery page specifics */
+/* ---------------------- */
+#gallery-container {
+  position: relative;
+  background: rgb(240, 245, 245);
+  height: 80%;
+  width: 90%;
+  padding: 1rem;
+  border-radius: 1em;
+  box-shadow: 6px 6px 6px rgb(55 84 170 / 10%),
+    -3px -3px 11px rgb(55 84 170 / 10%);
+}
+
+#gallery-container > img {
+  z-index: 1;
+}
+
+.controllers {
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+}
+
+.player {
+  border: 0;
+  border-radius: 50%;
+  width: 4rem;
+  aspect-ratio: 1;
+  color: rgb(240, 245, 245);
+  background: rgb(95, 89, 190);
+  cursor: pointer;
+}
