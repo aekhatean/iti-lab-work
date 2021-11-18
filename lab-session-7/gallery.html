@@ -11,15 +11,22 @@
     <div id="gallery-container">
       <div id="img-container"><img src="/res/1.jpg" /></div>
       <div class="controllers">
-        <button class="player" onclick="prevGalleryImage(this)"><</button>
+        <button class="player arrow" onclick="prevImage()"><</button>
         <button
-          class="player"
-          id="play-pause"
-          onclick="togglePlayGallery(this)"
+          class="player player-control"
+          id="play"
+          onclick="playGallery(); hideButton();"
         >
           Play
         </button>
-        <button class="player" onclick="nextGalleryImage(this)">></button>
+        <button
+          class="player player-control hidden"
+          id="pause"
+          onclick="pauseGallery(); hideButton();"
+        >
+          Pause
+        </button>
+        <button class="player arrow" onclick="nextImage()">></button>
       </div>
       <div class="images-list-container">
         <div class="scroll-back scorlling-btn"><</div>

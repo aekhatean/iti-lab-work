@@ -64,6 +64,14 @@ a {
   color: white;
 }
 
+/* --------- */
+/* Utilities */
+/* --------- */
+
+.hidden {
+  display: none;
+}
+
 /* --------------------- */
 /* Thanks page specifics */
 /* --------------------- */

@@ -56,6 +56,7 @@ function validateForm(ev, form) {
 }
 
 // Gallery player
+let currImageIndex = 0;
 
 function createImagesList() {
   let newImage = undefined;
@@ -70,29 +71,44 @@ function createImagesList() {
   }
 }
 
-function togglePlayGallery(button) {
-  const disImage = document.getElementById("img-container");
-  const imagesList = document.getElementById("images-list");
-  let counter = 0,
-    autoPlay = undefined,
-    shouldStop = false;
+function hideButton() {
+  const btns = document.getElementsByClassName("player-control");
+  const arrows = document.getElementsByClassName("arrow");
 
-  if (button.innerHTML === "Play") {
-    autoPlay = setInterval(() => {
-      disImage.innerHTML = `<img src=${imagesList.children[counter].src} />`;
-      counter++;
-      if (counter >= imagesList.children.length) {
-        counter = 0;
-      }
-      if (shouldStop) {
-        console.log(shouldStop);
-        clearInterval(autoPlay);
-      }
-    }, 500);
-    button.innerHTML = "Pause";
-  } else {
-    button.innerHTML = "Play";
-    shouldStop = true;
+  for (let i = 0; i < btns.length; i++) {
+    btns[i].classList.toggle("hidden");
   }
-  // console.log(shouldStop);
+
+  // remove arrow buttons if images slider is autoplaying
+  for (let i = 0; i < arrows.length; i++) {
+    arrows[i].classList.toggle("hidden");
+  }
+}
+
+let autoPlay = 0;
+const disImage = document.getElementById("img-container");
+const imagesList = document.getElementById("images-list");
+function playGallery() {
+  autoPlay = setInterval(() => {
+    disImage.innerHTML = `<img src=${imagesList.children[currImageIndex].src} />`;
+    currImageIndex++;
+    if (currImageIndex >= imagesList.children.length) {
+      currImageIndex = 0;
+    }
+  }, 500);
+}
+
+// Returns interval id but does not clear it
+function pauseGallery() {
+  clearInterval(autoPlay);
+}
+
+function nextImage() {
+  currImageIndex++;
+  disImage.innerHTML = `<img src=${imagesList.children[currImageIndex].src} />`;
+}
+
+function prevImage() {
+  currImageIndex--;
+  disImage.innerHTML = `<img src=${imagesList.children[currImageIndex].src} />`;
 }
