@@ -56,28 +56,43 @@ function validateForm(ev, form) {
 }
 
 // Gallery player
-const imagesArr = [""];
 
-function getGalleryDimensions(child) {
-  const { offsetWidth: width, offsetHeight: height } = child.parentElement;
-  return {
-    width,
-    height,
-  };
+function createImagesList() {
+  let newImage = undefined;
+  const displayingList = document.getElementById("images-list");
+
+  // Images are named by numbers from 1 to 8
+  for (let imageElemIndex = 1; imageElemIndex <= 8; imageElemIndex++) {
+    newImage = document.createElement("img");
+    newImage.setAttribute("src", `./res/${imageElemIndex}.jpg`);
+    newImage.classList.add("image-list-element");
+    displayingList.appendChild(newImage);
+  }
 }
 
 function togglePlayGallery(button) {
-  const { width, height } = getGalleryDimensions(button);
-  console.log(width, height);
-  const gallery = document.getElementById("img-container");
+  const disImage = document.getElementById("img-container");
+  const imagesList = document.getElementById("images-list");
+  let counter = 0,
+    autoPlay = undefined,
+    shouldStop = false;
+
   if (button.innerHTML === "Play") {
-    setInterval(function () {
-      for (image in imagesArr) {
-        gallery.innerHTML = `<img src=${image}/>`;
+    autoPlay = setInterval(() => {
+      disImage.innerHTML = `<img src=${imagesList.children[counter].src} />`;
+      counter++;
+      if (counter >= imagesList.children.length) {
+        counter = 0;
+      }
+      if (shouldStop) {
+        console.log(shouldStop);
+        clearInterval(autoPlay);
       }
     }, 500);
     button.innerHTML = "Pause";
   } else {
     button.innerHTML = "Play";
+    shouldStop = true;
   }
+  // console.log(shouldStop);
 }

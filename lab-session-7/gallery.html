@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="style.css" />
     <title>Gallery</title>
   </head>
-  <body>
+  <body onload="createImagesList()">
     <div id="gallery-container">
-      <div id="img-container"></div>
+      <div id="img-container"><img src="/res/1.jpg" /></div>
       <div class="controllers">
         <button class="player" onclick="prevGalleryImage(this)"><</button>
         <button
@@ -20,6 +20,11 @@
           Play
         </button>
         <button class="player" onclick="nextGalleryImage(this)">></button>
+      </div>
+      <div class="images-list-container">
+        <div class="scroll-back scorlling-btn"><</div>
+        <div id="images-list"></div>
+        <div class="scroll-forward scorlling-btn">></div>
       </div>
     </div>
     <script src="app.js"></script>
