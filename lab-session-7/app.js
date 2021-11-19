@@ -112,3 +112,33 @@ function prevImage() {
   currImageIndex--;
   disImage.innerHTML = `<img src=${imagesList.children[currImageIndex].src} />`;
 }
+
+/**
+ * Bonus assignments starting from page 3
+ */
+// -----------------
+// Rating stars page
+// -----------------
+
+const stars = document.getElementsByClassName("star");
+let shinyStars = undefined;
+let dullStats = undefined;
+for (let starIndex = 0; starIndex < stars.length; starIndex++) {
+  // make stars shine on mouse over (in)
+  stars[starIndex].addEventListener("mouseover", function () {
+    shinyStars = [].slice.call(stars, 0, starIndex + 1);
+    for (shinyStarIndex in shinyStars) {
+      shinyStars[shinyStarIndex].src = "/res/Filled_star.png";
+    }
+    console.log(shinyStars);
+  });
+
+  // make stars go dull on mouse leave (out)
+  stars[starIndex].addEventListener("mouseleave", function () {
+    dullStars = [].slice.call(stars, starIndex, stars.length);
+    for (dullStarIndex in dullStars) {
+      dullStars[dullStarIndex].src = "/res/empty_star.png";
+    }
+    console.log(dullStars);
+  });
+}
