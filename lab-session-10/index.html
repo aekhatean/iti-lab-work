@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Display video</title>
+  </head>
+  <body>
+    <main id="video-page">
+      <section id="video-player">
+        <video width="640" height="360" controls muted>
+          <source
+            src="/assets/pexels-kelly-lacy-9722139.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+      <section id="svg-shapes">
+        <svg id="svg" width="200" height="250">
+          <defs>
+            <radialGradient id="RadialGradient">
+              <stop offset="70%" stop-color="#396eb0" />
+              <stop offset="100%" stop-color="#daddfc" />
+            </radialGradient>
+          </defs>
+          <circle
+            id="svg-btn"
+            cx="100"
+            cy="125"
+            r="90"
+            stroke="#daddfc"
+            stroke-width="4"
+            fill="url(#RadialGradient)"
+          />
+        </svg>
+      </section>
+      <section id="canvas-shapes">
+        <canvas
+          id="face-canvas"
+          width="400"
+          height="200"
+          style="border: 1px solid #000000"
+        ></canvas>
+        <canvas
+          id="circle-canvas"
+          width="400"
+          height="200"
+          style="border: 1px solid #000000"
+        ></canvas>
+        <canvas
+          id="loading-canvas"
+          width="600"
+          height="600"
+          style="border: 1px solid #000000"
+        ></canvas>
+      </section>
+      <section id="avatar-svg">
+        <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <ellipse
+              id="head"
+              ry="54.5"
+              rx="54.5"
+              cy="226.5"
+              cx="331.5"
+              stroke="#000"
+              fill="#ffd371"
+            />
+            <circle
+              id="right-eye"
+              cy="226.5"
+              cx="351.5"
+              r="5"
+              stroke="#000"
+              stroke-width="4"
+              fill="#000"
+            />
+            <circle
+              id="left-eye"
+              cy="226.5"
+              cx="311.5"
+              r="5"
+              stroke="#000"
+              stroke-width="4"
+              fill="#000"
+            />
+
+            <ellipse
+              id="shoulders"
+              ry="10.5"
+              rx="63.5"
+              cy="293.5"
+              cx="329.5"
+              stroke="#000"
+              fill="#2D6862"
+            />
+            <rect
+              transform="rotate(-11.1846 452.5 319)"
+              id="left-arm"
+              height="44"
+              width="129"
+              y="297"
+              x="388"
+              stroke="#000"
+              fill="#ffd371"
+            />
+            <rect
+              rx="3"
+              id="body"
+              height="167"
+              width="128"
+              y="292"
+              x="266"
+              stroke="#2D6862"
+              fill="#2D6862"
+            />
+            <rect
+              transform="rotate(100.447 275.5 384)"
+              id="right-arm"
+              height="44"
+              width="129"
+              y="362"
+              x="211"
+              stroke="#000"
+              fill="#ffd371"
+            />
+            <rect
+              transform="rotate(10.3534 285 334.5)"
+              id="right-sleeve"
+              height="27"
+              width="44"
+              y="321"
+              x="263"
+              stroke="#2D6862"
+              fill="#2D6862"
+            />
+            <rect
+              transform="rotate(77.474 403 328.5)"
+              id="left-sleeve"
+              height="27"
+              width="44"
+              y="315"
+              x="381"
+              stroke="#2D6862"
+              fill="#2D6862"
+            />
+          </g>
+        </svg>
+      </section>
+      <section id="chart-svg-section">
+        <svg
+          id="chart-svg"
+          width="800"
+          height="600"
+          xmlns="http://www.w3.org/2000/svg"
+        ></svg>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

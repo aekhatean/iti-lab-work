@@ -1,0 +1,14 @@
+* {
+  font-family: sans-serif;
+}
+
+#video-page {
+  display: grid;
+  place-items: center;
+}
+
+#svg-btn,
+#svg-txt {
+  transition: all 400ms ease-out;
+  cursor: pointer;
+}
